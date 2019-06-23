@@ -11,7 +11,6 @@ import { AppRoutingModule } from './/app-routing.module';
 import { logging } from 'protractor';
 import { OrderdetailsComponent } from './orderdetails/orderdetails.component';
 import { FormsModule }   from '@angular/forms';
-import { NavbarComponent } from './navbar/navbar.component';
 
 const myRoutes: Routes = [
 {path:"login" ,component:LoginComponent}  ,
@@ -21,8 +20,7 @@ const myRoutes: Routes = [
   declarations: [
     AppComponent,
     LoginComponent,
-    OrderdetailsComponent,
-    NavbarComponent,
+    OrderdetailsComponent
     
   ],
 
