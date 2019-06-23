@@ -1,0 +1,78 @@
+<!-- <app-navbar></app-navbar> -->
+
+<nav class="navbar navbar-expand-sm bg-warning navbar-dark fixed-top  ">
+  <ul class="navbar-nav col-sm-9">
+    &nbsp;    &nbsp;     &nbsp;    &nbsp;
+    <li class="nav-item ">
+      <h2>Order Management System</h2>
+    </li>
+  </ul>
+  <ul class="nav navbar-nav ">
+    <li class="nav-item ">
+      <a *ngIf="login ==='/'" [routerLink]="['login']">Login</a>
+    </li>
+  </ul>     &nbsp;    &nbsp;     &nbsp;    &nbsp;
+
+  <ul class="nav navbar-nav ">
+      <li class="nav-item ">
+  <a *ngIf="!login =='/'" [routerLink]="['']">Logout</a>
+</li>
+  </ul>
+
+</nav>
+<br>
+<br>
+<!--corsoserl
+
+<div class="container-fluid"  style="background-color: purple">
+  <div id="demo" class="carousel slide" data-ride="carousel">
+
+
+    Indicators
+    <ul class="carousel-indicators">
+      <li data-target="#demo" data-slide-to="0" class="active"></li>
+      <li data-target="#demo" data-slide-to="1"></li>
+      <li data-target="#demo" data-slide-to="2"></li>
+    </ul>
+
+    The slideshow
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img style="width:100%" src="https://images-eu.ssl-images-amazon.com/images/G/31/img18/Wireless/CEEX/Motog6/June715999/Moto_g6_Amazon_GW_PCBunk_bank-1500x300._CB476416547_.jpg"
+          alt="Los Angeles">
+      </div>
+      <div class="carousel-item">
+        <img style="width:100%" src="https://images-eu.ssl-images-amazon.com/images/G/31/img18/Wireless/iPhone/iPhoneFestJune/GW/_D5172772-_IN_Wireless_iphone-Fest_1500x300._CB476520109_.jpg"
+          alt="Chicago">
+      </div>
+      <div class="carousel-item">
+        <img style="width:100%" src="https://images-eu.ssl-images-amazon.com/images/G/31/img18/Wireless/CEEX/OnePlus6/ALLGW/pc1500x300citi._CB476798204_.jpg"
+          alt="New York">
+      </div>
+    </div>
+
+    Left and right controls
+    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#demo" data-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </a>
+  </div>
+</div>-->
+<br/>
+<br/>
+
+
+
+
+
+<router-outlet></router-outlet>
+
+
+
+
+
+
+
+

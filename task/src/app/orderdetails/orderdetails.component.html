@@ -1,0 +1,227 @@
+<div class="container">
+
+  <div class="container">
+
+    <div class="modal" id="myModalsave">
+      <div class="modal-dialog">
+        <div class="modal-content">
+
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="container">
+          <div class="container">
+            <div class="row">
+              <div class="form-group">
+                <div class="col-sm-6">
+                  <label>orderId</label>
+                  <input type="text" class="form-control" id="orderId" name="orderId" [(ngModel)]="model.orderId">
+                </div>
+              </div>
+              <div class="form-group">
+                <label>orderDueDate</label>
+                <div class="col-sm-6">
+                  <input type="text" class="form-control" id="orderDueDate" name="orderDueDate"
+                    [(ngModel)]="model.orderDueDate">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+
+              <div class="form-group">
+                <label>customerName</label>
+                <div class="col-sm-6">
+                  <input type="text" class="form-control" id="customerName" name="customerName"
+                    [(ngModel)]="model.customerName">
+                </div>
+              </div>
+              <div class="form-group">
+                <label>customerAddress</label>
+                <div class="col-sm-6">
+                  <input type="text" class="form-control" id="customerAddress" name="customerAddress"
+                    [(ngModel)]="model.customerAddress">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+
+              <div class="form-group">
+                <label>customerPhone</label>
+                <div class="col-sm-6">
+                  <input type="text" class="form-control" id="customerPhone" name="customerPhone"
+                    [(ngModel)]="model.customerPhone">
+                </div>
+              </div>
+              <div class="form-group">
+                <label>totalOrders</label>
+                <div class="col-sm-6">
+                  <input type="text" class="form-control" id="totalOrders" name="totalOrders"
+                    [(ngModel)]="model.totalOrders">
+                  <br>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6">
+
+                <div class="form-group">
+                  <button type="submit" class="btn-primary" (click)="save()">save</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+          <!-- 
+          <form class="form-horizontal">
+            <div class="container">
+
+            </div>
+          </form> -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="wrapper">
+    <input class="btn btn-primary" id="b1" value="New Order" type="button" data-toggle="modal"
+      data-target="#myModalsave">
+  </div>
+  <h2>Order Details</h2>
+  <table class="table table-bordered" style="background-color: white">
+    <thead>
+      <tr>
+        <th>order no.</th>
+        <th>order due date</th>
+        <th>customer name</th>
+        <th>customer address</th>
+        <th>customer phone</th>
+        <th>total order</th>
+        <th> edit</th>
+        <th> delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let d of orderlist, let i=index">
+
+        <td>{{d.orderId}}</td>
+        <td>{{d.orderDueDate}}</td>
+        <td>{{d.customerName}}</td>
+        <td>{{d.customerAddress}}</td>
+        <td>{{d.customerPhone}}</td>
+        <td>{{d.totalOrders}}</td>
+        <td>
+          <div class="container">
+            <button type="button" class="btn btn-warning" (click)="editData(i)" data-toggle="modal"
+              data-target="#myModal1">
+              edit
+            </button>
+
+            <!-- ***********edit**************-->
+            <div class="modal" id="myModal1">
+              <div class="modal-dialog">
+                <div class="modal-content">
+
+                  <!-- Modal Header -->
+                  <div class="modal-header">
+                    <!-- <h4 class="modal-title">Modal Heading</h4> -->
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  </div>
+
+                  <div class="container">
+                    <div class="container">
+                      <!-- ------------ -->
+                      <div class="row">
+                        <div class="form-group">
+                          <div class="col-sm-6">
+                            <label>orderId</label>
+                            <input type="text" class="form-control" id="orderId" name="orderId"
+                              [(ngModel)]="model2.orderId">
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label>orderDueDate</label>
+                          <div class="col-sm-6">
+                            <input type="text" class="form-control" id="orderDueDate" name="orderDueDate"
+                              [(ngModel)]="model2.orderDueDate">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+
+                        <div class="form-group">
+                          <label>customerName</label>
+                          <div class="col-sm-6">
+                            <input type="text" class="form-control" id="customerName" name="customerName"
+                              [(ngModel)]="model2.customerName">
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label>customerAddress</label>
+                          <div class="col-sm-6">
+                            <input type="text" class="form-control" id="customerAddress" name="customerAddress"
+                              [(ngModel)]="model2.customerAddress">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+
+                        <div class="form-group">
+                          <label>customerPhone</label>
+                          <div class="col-sm-6">
+                            <input type="text" class="form-control" id="customerPhone" name="customerPhone"
+                              [(ngModel)]="model2.customerPhone">
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label>totalOrders</label>
+                          <div class="col-sm-6">
+                            <input type="text" class="form-control" id="totalOrders" name="totalOrders"
+                              [(ngModel)]="model2.totalOrders">
+                            <br>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="form-group">
+                          <div class="col-sm-12">
+                            <button type="submit" class="btn-primary" (click)="updatedetails()">update</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </td>
+        <!-------delete-->
+        <td>
+          <div class="container">
+            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModal">
+              delete
+            </button>
+            <div class="modal" id="myModal">
+              <div class="modal-dialog">
+                <div class="modal-content">
+
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  </div>
+                  <p>confirm to delete</p>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" (click)="deleteDetails(i)">yes</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">no</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

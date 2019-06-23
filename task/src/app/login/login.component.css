@@ -1,0 +1,12 @@
+#ud{
+    width: 100%
+}
+.wrapper {
+    border: solid black 2px; 
+    border-radius: 5px;
+    background-color: white;
+    position: absolute;
+    top:200px;
+    left: 500px
+    /* margin: 400px; */
+}

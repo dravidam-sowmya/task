@@ -1,0 +1,50 @@
+Refferences:
+1. Refference links
+2. bitbucket
+With the help of Matt, I found how to solve my issue : As I couldn't see hidden files, I didn't see that Angular CLI created a .git folder in the angular app folder. I removed it, and now It's working.
+For future apps, if we don't want Angular to initialize a git repo, we can specify it on the creation 
+command like this : ng new --skip-git 
+
+
+Steps:
+While creating Angular project use this command :- ng new ProjectName --skip-git
+* git init
+* git add --all
+* git commit -m "Initial Commit"
+* go to bitbucket and create repostitory
+* click on clone button 
+* copy the ur from https://...
+* git remote add origin (paste the url here);
+example: 
+> https://iamMadhanGannarapu@bitbucket.org/iamMadhanGannarapu/chatapp.git
+> git remote add origin https://iamMadhanGannarapu@bitbucket.org/iamMadhanGannarapu/chatapp.git
+
+
+* git push -u origin master   (or)  git push -u origin master --force
+
+
+
+
+-------------------------
+>$ git remote rm origin
+
+
+this is to remove the origin
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

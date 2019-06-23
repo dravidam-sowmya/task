@@ -1,0 +1,27 @@
+<div  class="wrapper">
+  <div class="container">
+    <div class="form-group">
+      <br>
+      <br>
+      <input type='text' class="form-control" name="username" #ud placeholder="Enter valid userneme"
+        style="width:250px;" />
+
+    </div>
+    <br>
+    <div class="form-group">
+      <input type='password' class="form-control" name="password" #pd placeholder="Enter valid password"
+        style="width:250px;" />
+
+    </div>
+    <br />
+    <div>
+      <button (click)="check(ud.value,pd.value)">Login</button>
+    </div>
+    <br>
+    <div>
+      <span>
+        <h2>{{validationsmsg}}</h2>
+      </span>
+    </div>
+  </div>
+</div>
