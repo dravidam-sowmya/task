@@ -3,7 +3,7 @@
     <div class="modal" id="myModalsave">
       <div class="modal-dialog">
         <div class="modal-content">
-<div class="modal-header">
+<div>
             <button type="button" class="close" data-dismiss="modal">&times;</button>
           </div>
           <div class="container">
@@ -12,13 +12,13 @@
               <div class="form-group">
                 <div class="col-sm-6">
                   <label>OrderId</label>
-                  <input type="text" class="form-control" id="orderId" name="orderId" [(ngModel)]="model.orderId">
+                  <input type="text" class="form-control" style="width:200px;" id="orderId" name="orderId" [(ngModel)]="model.orderId">
                 </div>
               </div>
               <div class="form-group">
                 <label>OrderDueDate</label>
                 <div class="col-sm-6">
-                  <input type="text" class="form-control" id="orderDueDate" name="orderDueDate"
+                  <input type="text" class="form-control"style="width:200px;"  id="orderDueDate" name="orderDueDate"
                     [(ngModel)]="model.orderDueDate">
                 </div>
               </div>
@@ -27,14 +27,14 @@
               <div class="form-group">
                 <label>CustomerName</label>
                 <div class="col-sm-6">
-                  <input type="text" class="form-control" id="customerName" name="customerName"
+                  <input type="text" class="form-control" style="width:200px;" id="customerName" name="customerName"
                     [(ngModel)]="model.customerName">
                 </div>
               </div>
               <div class="form-group">
                 <label>CustomerAddress</label>
                 <div class="col-sm-6">
-                  <input type="text" class="form-control" id="customerAddress" name="customerAddress"
+                  <input type="text" class="form-control"style="width:200px;"  id="customerAddress" name="customerAddress"
                     [(ngModel)]="model.customerAddress">
                 </div>
               </div>
@@ -43,14 +43,14 @@
               <div class="form-group">
                 <label>CustomerPhone</label>
                 <div class="col-sm-6">
-                  <input type="text" class="form-control" id="customerPhone" name="customerPhone"
+                  <input type="text" class="form-control" style="width:200px;" id="customerPhone" name="customerPhone"
                     [(ngModel)]="model.customerPhone">
                 </div>
               </div>
               <div class="form-group">
                 <label>TotalOrders</label>
                 <div class="col-sm-6">
-                  <input type="text" class="form-control" id="totalOrders" name="totalOrders"
+                  <input type="text" class="form-control" style="width:200px;" id="totalOrders" name="totalOrders"
                     [(ngModel)]="model.totalOrders">
                   <br>
                 </div>
@@ -66,9 +66,6 @@
             </div>
           </div>
         </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-          </div>
         </div>
       </div>
     </div>
@@ -111,7 +108,7 @@
             <div class="modal" id="myModal1">
               <div class="modal-dialog">
                 <div class="modal-content">
-                  <div class="modal-header">
+                  <div>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                   </div>
                   <div class="container">
@@ -121,13 +118,13 @@
                           <div class="col-sm-6">
                             <label>OrderId</label>
                             <input type="text" class="form-control" id="orderId" name="orderId"
-                              [(ngModel)]="model2.orderId">
+                            style="width:200px;" [(ngModel)]="model2.orderId">
                           </div>
                         </div>
                         <div class="form-group">
                           <label>OrderDueDate</label>
                           <div class="col-sm-6">
-                            <input type="text" class="form-control" id="orderDueDate" name="orderDueDate"
+                            <input type="text" class="form-control" style="width:200px;" id="orderDueDate" name="orderDueDate"
                               [(ngModel)]="model2.orderDueDate">
                           </div>
                         </div>
@@ -136,14 +133,14 @@
                         <div class="form-group">
                           <label>CustomerName</label>
                           <div class="col-sm-6">
-                            <input type="text" class="form-control" id="customerName" name="customerName"
+                            <input type="text" class="form-control"  style="width:200px;"id="customerName" name="customerName"
                               [(ngModel)]="model2.customerName">
                           </div>
                         </div>
                         <div class="form-group">
                           <label>CustomerAddress</label>
                           <div class="col-sm-6">
-                            <input type="text" class="form-control" id="customerAddress" name="customerAddress"
+                            <input type="text" class="form-control" style="width:200px;" id="customerAddress" name="customerAddress"
                               [(ngModel)]="model2.customerAddress">
                           </div>
                         </div>
@@ -152,14 +149,14 @@
                         <div class="form-group">
                           <label>CustomerPhone</label>
                           <div class="col-sm-6">
-                            <input type="text" class="form-control" id="customerPhone" name="customerPhone"
+                            <input type="text" class="form-control"style="width:200px;"  id="customerPhone" name="customerPhone"
                               [(ngModel)]="model2.customerPhone">
                           </div>
                         </div>
                         <div class="form-group">
                           <label>TotalOrders</label>
                           <div class="col-sm-6">
-                            <input type="text" class="form-control" id="totalOrders" name="totalOrders"
+                            <input type="text" class="form-control" style="width:200px;" id="totalOrders" name="totalOrders"
                               [(ngModel)]="model2.totalOrders">
                             <br>
                           </div>
@@ -188,12 +185,12 @@
               <div class="modal-dialog">
                 <div class="modal-content">
 
-                  <div class="modal-header">
+                  <div>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                   </div>
                   <p>Are you sure</p>
                   <div class="modal-footer">
-                    <button type="button" class="btn btn-danger" (click)="deleteDetails(i)">yes</button>
+                    <button type="button" class="btn btn-danger" (click)="deleteDetails(d.orderId)">yes</button>
                     <button type="button" class="btn btn-danger" data-dismiss="modal">no</button>
                   </div>
                 </div>

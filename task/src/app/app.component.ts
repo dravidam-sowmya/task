@@ -10,9 +10,9 @@ export class AppComponent {
   login: any;
   constructor(private router: Router) {
     // alert(JSON.stringify(this.router ))
-    console.log(this.router);
-    console.log(this.router.url);
-    console.log(window.URL);
+    // console.log(this.router);
+    // console.log(this.router.url);
+    // console.log(window.URL);
     // console.log(window.);
 
 
